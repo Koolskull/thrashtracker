@@ -1,0 +1,207 @@
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-primary);
+  overflow: auto;
+}
+
+.sequencer-header {
+  padding: 8px 16px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.pattern-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pattern-selector label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.pattern-selector select {
+  min-width: 120px;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 4px;
+}
+
+.step-indicator-cell {
+  width: 32px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-secondary);
+  transition: all 0.1s ease;
+}
+
+.step-indicator-cell.active {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.sequencer-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow: auto;
+}
+
+.track-headers {
+  display: grid;
+  grid-template-columns: 60px repeat(8, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  z-index: 10;
+  padding-bottom: 8px;
+}
+
+.track-header-cell {
+  padding: 8px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.track-header-cell:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--border-hover);
+}
+
+.track-header-cell.selected {
+  background-color: var(--bg-active);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.steps-container {
+  display: flex;
+  gap: 8px;
+}
+
+.step-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 60px;
+}
+
+.step-number-cell {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 4px;
+}
+
+.step-cell {
+  width: 100%;
+  height: 40px;
+  min-width: 40px;
+  background-color: var(--grid-cell);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  position: relative;
+  font-size: 11px;
+  user-select: none;
+}
+
+.step-cell:hover {
+  background-color: var(--grid-cell-hover);
+  border-color: var(--border-hover);
+}
+
+.step-cell.active {
+  background-color: var(--bg-active);
+  border-color: var(--accent);
+}
+
+.step-cell.playing {
+  background-color: var(--grid-cell-playing);
+  border-color: var(--success);
+  box-shadow: 0 0 8px rgba(78, 201, 176, 0.5);
+}
+
+.step-cell.selected {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+
+.step-note {
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.step-dot {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sequencer-grid {
+    padding: 8px;
+  }
+  
+  .step-cell {
+    height: 32px;
+    min-width: 32px;
+    font-size: 10px;
+  }
+  
+  .step-number-cell {
+    height: 32px;
+  }
+  
+  .track-headers {
+    grid-template-columns: 50px repeat(8, 1fr);
+  }
+  
+  .step-numbers {
+    width: 50px;
+  }
+}
+

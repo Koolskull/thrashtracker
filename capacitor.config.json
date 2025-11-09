@@ -1,0 +1,26 @@
+{
+  "appId": "com.trashtracker.app",
+  "appName": "TrashTracker",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#1e1e1e",
+      "showSpinner": false
+    }
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "scrollEnabled": true
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true
+  }
+}
+

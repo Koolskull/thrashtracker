@@ -1,0 +1,159 @@
+/* KongText Pixelated Font - Retro Tracker Look */
+@font-face {
+  font-family: 'KongText';
+  src: url('/fonts/KongText-Regular.woff2') format('woff2'),
+       url('/fonts/KongText-Regular.woff') format('woff'),
+       url('/fonts/KongText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* VSCode-like Harsh Contrast Theme */
+:root {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #2d2d30;
+  --bg-hover: #2a2d2e;
+  --bg-active: #094771;
+  --bg-selected: #37373d;
+  
+  --text-primary: #cccccc;
+  --text-secondary: #858585;
+  --text-disabled: #3e3e42;
+  
+  --border: #3e3e42;
+  --border-active: #007acc;
+  --border-hover: #4e4e52;
+  
+  --accent: #007acc;
+  --accent-hover: #005a9e;
+  --accent-active: #0e639c;
+  
+  --success: #4ec9b0;
+  --warning: #dcdcaa;
+  --error: #f48771;
+  
+  --grid-bg: #1e1e1e;
+  --grid-cell: #252526;
+  --grid-cell-active: #007acc;
+  --grid-cell-playing: #4ec9b0;
+  --grid-cell-hover: #2a2d2e;
+  
+  --font-mono: 'KongText', 'Courier New', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.4;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling - VSCode-like */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Button styles */
+button {
+  font-family: var(--font-mono);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--border-hover);
+}
+
+button:active {
+  background-color: var(--bg-active);
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input styles */
+input, select {
+  font-family: var(--font-mono);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+input:focus, select:focus {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+/* Utility classes */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-disabled {
+  color: var(--text-disabled);
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.border-active {
+  border-color: var(--accent);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    font-size: 11px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}
+
