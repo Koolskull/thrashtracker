@@ -1,6 +1,6 @@
 {
-  "appId": "com.trashtracker.app",
-  "appName": "TrashTracker",
+  "appId": "com.thrashtracker.app",
+  "appName": "ThrashTracker",
   "webDir": "dist",
   "bundledWebRuntime": false,
   "server": {

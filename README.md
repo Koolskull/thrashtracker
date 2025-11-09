@@ -1,4 +1,4 @@
-# TrashTracker
+# ThrashTracker
 
 A music tracker sequencer with audio synthesis capabilities, designed to work as a cross-platform standalone app and eventually as a VST3 plugin. Features integration with custom Bluetooth MIDI controllers for note playback and hexadecimal-pattern activation.
 
@@ -156,7 +156,7 @@ For custom Bluetooth MIDI controller integration:
 ### Project Structure
 
 ```
-trashtracker/
+thrashtracker/
 ├── src/
 │   ├── components/       # React components
 │   │   └── Sequencer.tsx

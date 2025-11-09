@@ -53,7 +53,7 @@ function App() {
     <div className="app">
       <div className="app-header">
         <div className="app-title">
-          <h1>TrashTracker</h1>
+          <h1>ThrashTracker</h1>
           <span className="app-version">v0.1.0</span>
         </div>
         <div className="app-controls">

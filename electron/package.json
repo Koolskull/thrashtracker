@@ -1,7 +1,7 @@
 {
-  "name": "trashtracker-electron",
+  "name": "thrashtracker-electron",
   "version": "0.1.0",
-  "description": "TrashTracker Electron wrapper",
+  "description": "ThrashTracker Electron wrapper",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -12,8 +12,8 @@
     "electron-builder": "^24.9.1"
   },
   "build": {
-    "appId": "com.trashtracker.app",
-    "productName": "TrashTracker",
+    "appId": "com.thrashtracker.app",
+    "productName": "ThrashTracker",
     "directories": {
       "output": "release"
     },

@@ -1,8 +1,8 @@
 [package]
-name = "trashtracker"
+name = "thrashtracker"
 version = "0.1.0"
-description = "TrashTracker - Music Sequencer"
-authors = ["TrashTracker Team"]
+description = "ThrashTracker - Music Sequencer"
+authors = ["ThrashTracker Team"]
 license = ""
 repository = ""
 edition = "2021"
